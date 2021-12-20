@@ -2,4 +2,6 @@
     <string name="app_name">Instant Mystery Party</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="my_secrets_label">My Secrets</string>
+    <string name="others_secrets_label">Secrets about Others</string>
 </resources>
