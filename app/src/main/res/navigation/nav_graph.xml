@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/cluesFragment">
+
+    <fragment
+        android:id="@+id/cluesFragment"
+        android:name="com.example.instantmysteryparty.CluesFragment"
+        android:label="fragment_clues"
+        tools:layout="@layout/fragment_clues" />
+    <fragment
+        android:id="@+id/suspectsFragment"
+        android:name="com.example.instantmysteryparty.SuspectsFragment"
+        android:label="fragment_suspects"
+        tools:layout="@layout/fragment_suspects" />
+    <fragment
+        android:id="@+id/evidenceFragment"
+        android:name="com.example.instantmysteryparty.EvidenceFragment"
+        android:label="fragment_evidence"
+        tools:layout="@layout/fragment_evidence" />
+</navigation>
