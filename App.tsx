@@ -1,20 +1,29 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { Button, StyleSheet, Text, TextInput, View } from 'react-native';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
+        <Text style={styles.header}>Welcome to the party!</Text>
+        <Button title="Generate mystery code" onPress={() => alert(getGeneratedCode())}/>
       <StatusBar style="auto" />
     </View>
   );
 }
 
+function getGeneratedCode() {
+  return "test code"
+}
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    flexDirection: 'column',
+    backgroundColor: '#bbbefe',
     alignItems: 'center',
     justifyContent: 'center',
   },
+  header: {
+    padding: '20px'
+  }
 });
