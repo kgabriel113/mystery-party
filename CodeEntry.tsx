@@ -1,13 +1,14 @@
 import { useState } from 'react';
 import { Button, StyleSheet, Text, TextInput, View } from 'react-native';
+import appStyles from './AppStyles';
 
 export default function CodeEntry() {
   const [code, setCode] = useState('');
 
   return (
-    <View style={styles.container}>
-        <Text style={styles.text}>Enter a code to join a game</Text>
-        <View style={{flexDirection: 'row'}}>
+    <View style={appStyles.containerCentered}>
+        <Text style={appStyles.text}>Enter a code to join a game</Text>
+        <View style={{flexDirection: 'row', alignSelf: 'center'}}>
           <TextInput
             style={styles.codeEntry}
             placeholder="MMMMMM"
@@ -21,15 +22,6 @@ export default function CodeEntry() {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 0.3,
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center'
-  },
-  text: {
-    padding: '10px'
-  },
   codeEntry: {
     width: '7em',
     backgroundColor: 'white',

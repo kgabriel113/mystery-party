@@ -1,6 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { Button, StyleSheet, Text, View } from 'react-native';
 import CodeEntry from './CodeEntry';
+import NewGameButton from './NewGameButton';
 
 export default function App() {
 
@@ -11,32 +12,29 @@ export default function App() {
           Welcome to the party!
         </Text>
         <CodeEntry />
-        <Button title="Generate new mystery code" onPress={() => alert(getGeneratedCode())}/>
+        <NewGameButton />
       <StatusBar style="auto" />
     </View>
   );
 }
 
-function getGeneratedCode() {
-  return "test code"
-}
+
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     flexDirection: 'column',
-    backgroundColor: '#bbbefe',
+    backgroundColor: '#271637',
     alignItems: 'center',
     justifyContent: 'center',
   },
   header: {
-    fontSize: 24,
+    color: 'white',
+    fontSize: 30,
+    fontStyle: 'italic',
+    fontWeight: 'bold',
+    textShadowOffset: {width: 5, height: 5},
+    textShadowColor: 'black',
     padding: '20px'
-  },
-  codeEntry: {
-    width: '7em',
-    backgroundColor: 'white',
-    textAlign: 'center',
-    padding: '0.5em'
   }
 });
