@@ -1,11 +1,17 @@
 import { StatusBar } from 'expo-status-bar';
-import { Button, StyleSheet, Text, TextInput, View } from 'react-native';
+import { Button, StyleSheet, Text, View } from 'react-native';
+import CodeEntry from './CodeEntry';
 
 export default function App() {
+
   return (
     <View style={styles.container}>
-        <Text style={styles.header}>Welcome to the party!</Text>
-        <Button title="Generate mystery code" onPress={() => alert(getGeneratedCode())}/>
+        <Text style={styles.header}>
+          <span role="img" aria-label="party popper">🎉</span>
+          Welcome to the party!
+        </Text>
+        <CodeEntry />
+        <Button title="Generate new mystery code" onPress={() => alert(getGeneratedCode())}/>
       <StatusBar style="auto" />
     </View>
   );
@@ -24,6 +30,13 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   header: {
+    fontSize: 24,
     padding: '20px'
+  },
+  codeEntry: {
+    width: '7em',
+    backgroundColor: 'white',
+    textAlign: 'center',
+    padding: '0.5em'
   }
 });
